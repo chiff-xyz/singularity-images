@@ -2,7 +2,7 @@ Bootstrap: library
 From: debian:9
 
 %labels
-    Author dppereyra@chiff.xyz
+    Author dppereyra@gmail.com
 
 %environment
     export PATH=/usr/local/bin:$PATH
