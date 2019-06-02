@@ -1,6 +1,6 @@
 USER?=
 APP?=python
-VER?=3.7.3-debian-stretch
+VER?=3.7.3-debian
 
 .PHONY: build
 build:
