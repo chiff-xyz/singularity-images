@@ -10,3 +10,7 @@ build:
 .PHONY: publish
 publish:
 	singularity push build/${APP}-${VER}.sif library://${USER}/default/${APP}:${VER}
+
+.PHONY: clean
+clean:
+	rm -Rf build/*.sif
