@@ -1,0 +1,30 @@
+Bootstrap: library
+From: debian:9
+
+%labels
+    Author dppereyra@gmail.com
+
+%environment
+    export PATH=/usr/local/bin:$PATH
+    export LANG=C.UTF-8
+    export GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
+    export PYTHON_VERSION=3.6.8
+    export PYURL=https://www.python.org/ftp/python
+    export PYTHON_PIP_VERSION=19.1.1
+
+%files
+    python/py-install.sh /py-install.sh
+
+%post
+    export PATH=/usr/local/bin:$PATH
+    export LANG=C.UTF-8
+    export GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
+    export PYVER=3.6.8
+    export PYURL=https://www.python.org/ftp/python
+    export PIPVER=19.1.1
+
+    bash /py-install.sh
+    rm /py-install.sh
+
+%runscript
+    python3
