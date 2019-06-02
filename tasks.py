@@ -6,7 +6,7 @@ BUILD_CMD = 'sudo singularity build build/{app}-{os}.sif {app}/{os}.def'
 @task
 def clean(ctx, extra=''):
     patterns = [
-        'build/*'
+        'build/*.sif'
     ]
     if extra:
         patterns.append(extra)
